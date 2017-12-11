@@ -31,11 +31,13 @@ Run `go get github.com/ceshihao/testleak`
 package main
 
 import (
-	"testing"
+    "testing"
+
+    "github.com/ceshihao/testleak"
 )
 
 func TestUseTestLeak(t *testing.T) {
-	defer TestLeak(t)()
+	defer testleak.TestLeak(t)()
 	// Testing your code here
 }
 ```
